@@ -1,4 +1,24 @@
-# Assam Through Time
+# Assam Through Time: interactive historical map of Assam (350 CE to today)
+
+> Assam Through Time: an interactive year-by-year map of Assam's kingdoms and history, from 350 CE to today.
+
+**[Live site](https://axomrank.github.io/assam-history-map/)** · [Part of AxomRank](https://github.com/axomrank)
+
+## At a glance
+
+- **Play through every year** from 350 CE: kingdoms appear, grow to their greatest extent and give way to the next
+- **Editable source tables** in `data/source/`, compiled into `data/generated/atlas.js`
+- **Shared citations** in `data/source/sources.json`
+- **Node.js 18+ checks** (`npm run verify`) with no package installation
+
+## Quick start
+
+```bash
+npm run verify    # validate, rebuild and run regression checks
+npm run preview   # open http://localhost:8000
+```
+
+## Overview
 
 One page to explore Assam's history year by year, from 350 CE to today: how each kingdom
 began, grew to its greatest extent and gave way to the next.
@@ -119,3 +139,32 @@ The [bank-specific frontier research](research/ahom-bank-frontiers-2026-11-04/RE
 ## Visible statehood and Bangladesh context
 
 The default **States & territories** map uses distinct colours for Indian states and a horizontal pattern for Union Territories. The **Political affiliation** selector restores the common India fill. A map banner shows milestones for the selected year or region. Modern views use a subdued whole-country Bangladesh reference instead of a separate Sylhet patch or permanent Sylhet city label; historical Sylhet layers before 1947 remain. The East Pakistan country outline is explicitly a modern geographic proxy. Run `node tools/check-map-appearance.js` to verify these display rules alongside the historical checks.
+
+## Roadmap: future improvements
+
+- [ ] Deep links to a year or kingdom (`#year=1671`), for sharing and search
+- [ ] Link each kingdom and event to the matching AxomRank lesson and exam questions
+- [ ] An Assamese interface
+- [ ] Static, indexable pages per kingdom, generated from the source tables
+- [ ] Mobile performance pass for low-end Android phones
+
+## For AI agents and contributors
+
+Read [AGENTS.md](AGENTS.md) and `docs/architecture.md`. Edit `data/source/`, never `data/generated/`, then run `npm run verify`.
+
+Commit as the `axomrank` account. Keep changes small and reviewable, and run the repository's checks before pushing.
+
+## Part of AxomRank
+
+[AxomRank](https://axomrank.pages.dev) offers free, bilingual preparation for Assam government exams. Related repositories:
+
+- **Learn:** [axomrank.github.io](https://github.com/axomrank/axomrank.github.io) (the AxomRank learning app), [ahom-kings-lessons](https://github.com/axomrank/ahom-kings-lessons) (41 bilingual Ahom reign lessons), [floor-test-simulator](https://github.com/axomrank/floor-test-simulator) (parliamentary majority simulator)
+- **Explore Assam history:** [ahom-kingdom-history](https://github.com/axomrank/ahom-kingdom-history) (illustrated Ahom kingdom website), [assam-history-characters](https://github.com/axomrank/assam-history-characters) (character sheets for Assam's history), [assam-visual-archive](https://github.com/axomrank/assam-visual-archive) (gallery of Assam scenes and photographs), [assam-heritage-ai-art](https://github.com/axomrank/assam-heritage-ai-art) (AI art gallery of Assamese heritage)
+- **Open data:** [assam-exam-pyq](https://github.com/axomrank/assam-exam-pyq) (2,398 previous-year questions with answers), [assam-exam-syllabus](https://github.com/axomrank/assam-exam-syllabus) (syllabi for 12 recruitment boards), [assam-maps](https://github.com/axomrank/assam-maps) (map portal and GIS layers), [assam-history-sources](https://github.com/axomrank/assam-history-sources) (Kamarupa inscriptions and primary sources)
+- **Publishing and brand:** [axomrank-blog](https://github.com/axomrank/axomrank-blog) (exam guides built from real papers), [assam-history-books](https://github.com/axomrank/assam-history-books) (13-book history of Assam), [axomrank-brand-assets](https://github.com/axomrank/axomrank-brand-assets) (brand kit and social media library)
+
+## License and contact
+
+No license file yet, so all rights are reserved by default.
+
+Corrections and questions: open an issue in this repository. AxomRank is run by Angsuman Das (sole proprietor).
